@@ -15,15 +15,15 @@ Finally the clusters obtained are passed back to R to allow the user to expore g
 
 ## Dependencies
 ### System
-* The MCL package installed and available on the machine
+* The MCL package (https://micans.org/mcl) installed and available on the machine
 
 ### R Packages 
-* RColorBrewer - plots
-* clusterProfiler - Ontology Analysis
-* AnnotationDbi - Ontology Analysis
-* org.Hs.eg.db - Ontology Analysis, an annotation object for your genome
-* ggplot2 - Plotting Functions
-* gridExtra - Plotting Functions
+* *RColorBrewer* - plots
+* *clusterProfiler* - Ontology Analysis
+* *AnnotationDbi* - Ontology Analysis
+* *org.Hs.eg.db* - Ontology Analysis, an annotation object for your genome
+* *ggplot2* - Plotting Functions
+* *gridExtra* - Plotting Functions
 
 
 ## Speed
