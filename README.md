@@ -13,6 +13,23 @@ This correlation matrix is transformed into a weighted network where genes are c
 
 Finally the clusters obtained are passed back to R to allow the user to expore gene-expression and Gene-Ontology characteristics of the gene-expression clusters.
 
+## Dependencies
+### System
+* The MCL package installed and available on the machine
+
+### R Packages 
+* RColorBrewer - plots
+* clusterProfiler - Ontology Analysis
+* AnnotationDbi - Ontology Analysis
+* org.Hs.eg.db - Ontology Analysis, an annotation object for your genome
+* ggplot2 - Plotting Functions
+* gridExtra - Plotting Functions
+
+
+## Speed
+The test example provided is a gene-expression matrix with 32675 genes across 65 samples (i.e. a matrix with > 2M entries). Correlation analysis and clustering of this matrix typically runs in less than 30 seconds on a recent laptop with a very low memory footprint (<500Mb RAM).
+
+
 ## Steps Involved
 
 1. The user provides a gene-expression matrix or dataframe in R (rows are genes, columns are samples). This data is usually normalised.
@@ -152,3 +169,13 @@ ENSG00000002016    2671
 The package provides toolkits to explore the shared co-expression within clusters and also to perform Gene Ontology Analysis via the *clusterProfiler* package.
 
 ## Expression Analysis
+
+The *analyse_profile* function:
+
+It is now possible to explore the features of shared co-expression in the final clusters obtained by the *mcl_cluster* function above which in this case is in the *myclusters* object. Finally, the user provides one, or a range of clusters for which gene-expression summary plots are produced.
+
+```
+analyse_profile(mymatrix,myclusters,CLUSTERNO)
+```
+
+## Gene Ontology Analysis
