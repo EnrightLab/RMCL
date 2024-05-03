@@ -24,6 +24,32 @@ Finally the clusters obtained are passed back to R to allow the user to expore g
 
 
 ## Usage
+
+Given an input gene-exprsession matrix such as this:
+```
+> head(input_matrix)
+                X1029479_RD_CORE_S30 X1337985_CM_MEM_S28 X1343208_RD_WASH_S59 X1440723_RD_WASH_S58 X1466854_RD_WASH_S9   .....
+ENSG00000000003              0.00000          170.366754             75.73753            213.88457            88.79548   .....
+ENSG00000000005              0.00000            0.000000              0.00000              0.00000             0.00000   .....
+ENSG00000000419            105.34711           99.050439             88.20067            145.62353           111.71044   .....
+ENSG00000000457             60.19835          134.708597            117.92046            167.23953           111.13756   .....
+ENSG00000000460             62.34829           26.743618             42.18293             38.68125            55.56878   .....
+ENSG00000000938           1337.26333            8.914539            160.10338            122.86986           173.00796   .....
+```
+
+You perform the clustering analysis as follows:
+
+```
+mcl_cluster(input_matrix, inflation=3.0, corr="pearson", threshold=0.7)
+```
+
+In this case we run correlation analysis, filtering and MCL clustering with the following parameters: 
+a) ```threshold=0.7``` - correlation cutoff at >0.7 - Genes with higher than this value are kept in the weighted expression network
+b) ```corr="pearson"``` - We choose Pearson correlation, other options are (Pearson, Cosine, Jaccard).
+c) ```inflation=3.0``` - Use 3.0 as the Inflation parameter (granularity setting) for MCL, its main parameter
+
+The output is as follows:
+
 ```
 [1] "Clustering:32675" "Clustering:65"   
 [1] "Inflation:3"
