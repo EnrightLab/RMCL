@@ -44,9 +44,9 @@ mcl_cluster(input_matrix, inflation=3.0, corr="pearson", threshold=0.7)
 ```
 
 In this case we run correlation analysis, filtering and MCL clustering with the following parameters: 
-a) ```threshold=0.7``` - correlation cutoff at >0.7 - Genes with higher than this value are kept in the weighted expression network
-b) ```corr="pearson"``` - We choose Pearson correlation, other options are (Pearson, Cosine, Jaccard).
-c) ```inflation=3.0``` - Use 3.0 as the Inflation parameter (granularity setting) for MCL, its main parameter
+* a) ```threshold=0.7``` - correlation cutoff at >0.7 - Genes with higher than this value are kept in the weighted expression network
+* b) ```corr="pearson"``` - We choose Pearson correlation, other options are (Pearson, Cosine, Jaccard).
+* c) ```inflation=3.0``` - Use 3.0 as the Inflation parameter (granularity setting) for MCL, its main parameter
 
 The output is as follows:
 
