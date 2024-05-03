@@ -116,3 +116,39 @@ OR
 
 [1] "Clustering Complete!"
 ```
+
+
+## Output Results
+
+The data returned is an R Dataframe with Genes as Rows and Cluster assignments for each gene in a *Cluster* named column. Cluster IDs are numeric with the largest cluster starting at 1.
+
+The object looks like this:
+```
+                Cluster
+ENSG00000000003     587
+ENSG00000000005      60
+ENSG00000000419      18
+ENSG00000000457    2666
+ENSG00000000460      55
+ENSG00000000938       6
+ENSG00000000971     418
+ENSG00000001036     588
+ENSG00000001084      33
+ENSG00000001167    2667
+ENSG00000001460       1
+ENSG00000001461     101
+ENSG00000001497    1417
+ENSG00000001561    2668
+ENSG00000001617       6
+ENSG00000001626       3
+ENSG00000001629    2669
+ENSG00000001630    2670
+ENSG00000001631     892
+ENSG00000002016    2671
+```
+
+## Accessory Functions
+
+The package provides toolkits to explore the shared co-expression within clusters and also to perform Gene Ontology Analysis via the *clusterProfiler* package.
+
+## Expression Analysis
