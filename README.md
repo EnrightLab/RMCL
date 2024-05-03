@@ -1,5 +1,5 @@
 # RMCL
-Kate Zielinski,
+Kate Zielinski (kez22@cam.ac.uk),
 Enright Laboratory, 
 Dept. Of Pathology,
 University of Cambridge.
@@ -24,5 +24,69 @@ Finally the clusters obtained are passed back to R to allow the user to expore g
 
 
 ## Usage
+```
+[1] "Clustering:32675" "Clustering:65"   
+[1] "Inflation:3"
+[1] "Correlation Function:pearson"
+[1] "Processing Matrix using mcxarray to generate correlations"
+[mcxarray] read table with 65 rows and 32675 columns
+[mcxarray] 2123875 entries in table
+___ [mcxarray] constant data for label <ENSG00000183169> - no pearson
+___ [mcxarray] constant data for label <ENSG00000199595> - no pearson
+___ [mcxarray] constant data for label <ENSG00000214514> - no pearson
+___ [mcxarray] constant data for label <ENSG00000224107> - no pearson
+___ [mcxarray] constant data for label <ENSG00000228842> - no pearson
+___ [mcxarray] constant data for label <ENSG00000248444> - no pearson
+___ [mcxarray] constant data for label <ENSG00000268823> - no pearson
+___ [mcxarray] constant data for label <ENSG00000270066> - no pearson
+0000000000000000000
+[mclIO] writing </var/folders/mp/16qzjn013vx0yj1gv6hwq_rc0000gn/T//RtmpBrL2J2mcl_matrix_corr.mx>
+.......................................
+[mclIO] wrote native interchange 32675x32675 matrix with 3430923 entries to stream </var/folders/mp/16qzjn013vx0yj1gv6hwq_rc0000gn/T//RtmpBrL2J2mcl_matrix_corr.mx>
+[1] "Running Markov Clustering with MCL on correlation matrix"
+[mclIO] reading </var/folders/mp/16qzjn013vx0yj1gv6hwq_rc0000gn/T//RtmpBrL2J2mcl_matrix_corr.mx>
+.......................................
+[mclIO] read native interchange 32675x32675 matrix with 3430923 entries
+[mcl] pid 97338
+ ite -------------------  chaos  time hom(avg,lo,hi) m-ie m-ex i-ex fmv
+  1  ................... 130.57  2.29 4902.96/0.00/159226336.00 7.18 4.05 4.05  45
+  2  ................... 219.12 12.86 0.82/0.06/48.73 11.19 0.76 3.07  71
+  3  ................... 148.96  5.72 0.79/0.02/10.69 6.26 0.39 1.21  71
+  4  ...................  91.03  1.41 0.94/0.06/60.33 2.63 0.33 0.40  53
+  5  ...................  29.79  0.42 0.92/0.09/39.12 1.41 0.38 0.15  24
+  6  ...................  12.63  0.17 0.86/0.16/14.38 1.08 0.51 0.08  11
+  7  ...................   6.93  0.04 0.94/0.33/5.19 1.02 0.53 0.04   0
+  8  ...................   3.13  0.02 0.98/0.23/1.69 1.00 0.43 0.02   0
+  9  ...................   2.15  0.01 0.99/0.73/1.70 1.00 0.76 0.01   0
+ 10  ...................   1.12  0.01 1.00/0.76/1.47 1.00 0.89 0.01   0
+ 11  ...................   1.92  0.01 1.00/0.56/1.00 1.00 0.99 0.01   0
+ 12  ...................   1.74  0.01 1.00/0.76/1.00 1.00 0.99 0.01   0
+ 13  ...................   0.04  0.01 1.00/0.96/1.00 1.00 1.00 0.01   0
+ 14  ...................   0.07  0.01 1.00/1.00/1.00 1.00 1.00 0.01   0
+ 15  ...................   0.22  0.01 1.00/0.96/1.00 1.00 1.00 0.01   0
+ 16  ...................   0.71  0.01 0.99/0.72/1.00 1.00 1.00 0.01   0
+ 17  ...................   1.89  0.01 0.99/0.36/1.00 1.00 1.00 0.01   0
+ 18  ...................   0.93  0.01 0.99/0.64/1.00 1.00 1.00 0.01   0
+ 19  ...................   0.96  0.01 1.00/0.50/1.00 1.00 0.88 0.01   0
+ 20  ...................   0.19  0.01 1.00/0.92/1.00 1.00 0.97 0.01   0
+ 21  ...................   0.00  0.01 1.00/1.00/1.00 1.00 0.99 0.01   0
+[mcl] jury pruning marks: <91,94,98>, out of 100
+[mcl] jury pruning synopsis: <92.6 or scrumptious> (cf -scheme, -do log)
+[mcl] output is in /var/folders/mp/16qzjn013vx0yj1gv6hwq_rc0000gn/T//RtmpBrL2J2mcl_matrix.clusters
+[mcl] 12067 clusters found
+[mcl] output is in /var/folders/mp/16qzjn013vx0yj1gv6hwq_rc0000gn/T//RtmpBrL2J2mcl_matrix.clusters
 
+Please cite:
+    Stijn van Dongen, Graph Clustering by Flow Simulation.  PhD thesis,
+    University of Utrecht, May 2000.
+       (  http://www.library.uu.nl/digiarchief/dip/diss/1895620/full.pdf
+       or  http://micans.org/mcl/lit/svdthesis.pdf.gz)
+OR
+    Stijn van Dongen, A cluster algorithm for graphs. Technical
+    Report INS-R0010, National Research Institute for Mathematics
+    and Computer Science in the Netherlands, Amsterdam, May 2000.
+       (  http://www.cwi.nl/ftp/CWIreports/INS/INS-R0010.ps.Z
+       or  http://micans.org/mcl/lit/INS-R0010.ps.Z)
 
+[1] "Clustering Complete!"
+```
